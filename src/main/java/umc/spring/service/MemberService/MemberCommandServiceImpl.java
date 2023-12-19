@@ -24,7 +24,6 @@ import java.util.stream.Collectors;
 public class MemberCommandServiceImpl implements MemberCommandService{
 
     private final MemberRepository memberRepository;
-
     private final FoodTypeRepository foodTypeRepository;
     @Override
     @Transactional

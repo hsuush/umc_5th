@@ -13,11 +13,16 @@ public class MemberRequestDTO {
         @NotBlank
         String name;
 
+        String nickname;
+
         @NotNull
         Integer gender;
 
-        String nickname;
+        String address;
 
+        String specAddress;
+
+        String email;
         List<Long> preferCategory;
     }
 }

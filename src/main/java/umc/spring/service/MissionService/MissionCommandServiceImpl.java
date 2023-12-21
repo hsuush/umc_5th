@@ -22,7 +22,6 @@ public class MissionCommandServiceImpl implements MissionCommandService{
     @Transactional
     public Mission createMission(MissionRequestDTO.createMissionDto request, Long storeId) {
         Store store = storeRepository.findById(storeId).orElseThrow(()->new StoreHandler(ErrorStatus.STORE_NOT_FOUND));
-        //CONVERTER로 DTO -> 객체
         Mission newMission = MissionConverter.toMission(request, store);
         return missionRepository.save(newMission);
     }

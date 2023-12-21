@@ -2,10 +2,8 @@ package umc.spring.domain;
 
 import lombok.*;
 import umc.spring.domain.common.BaseEntity;
-
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+
 
 @Entity
 @Getter
@@ -22,9 +20,8 @@ public class Review extends BaseEntity {
     private String content;
 
     @Column(nullable = false)
-    private double rating;
+    private Float rating;
 
-    @Column(nullable = false)
     private boolean status;
 
     @ManyToOne(fetch = FetchType.LAZY)
